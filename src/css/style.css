@@ -5,76 +5,187 @@
     font-style: normal;
     font-variation-settings:
         "wdth" 400;
-    background-color: #FAFAFC;
+
+    --primary_white_color: #FDFBF6;
+    --secondary_white_color: #d4d4d4;
+    --primary_dark_color: #1a1a1a;
+}
+
+@mixin main_title {
+    font-weight: 300;
+    font-size: xx-large;
+    position: relative;
+    top: 10px;
 }
 
 body,
 html {
     margin: 0;
     padding: 0;
-}
-
-.dark_mode {
-    background-color: rgb(3, 0, 5);
-    color: aliceblue;
+    background-color: var(--primary_dark_color);
 }
 
 a {
     text-decoration: none;
-    color: rgb(59, 14, 149);
 }
 
+/* header div */
 .name_div {
-    position: relative;
+    background-color: transparent;
+    background-image: linear-gradient(200deg, rgb(18, 1, 1) 0%, rgba(67, 67, 67, 1) 85%);
     display: flex;
-    flex-direction: row; 
+    flex-direction: row-reverse;
     align-items: flex-start;
 }
 
-.banner {
+/* mushroom img at header */
+.mushroom_img {
     z-index: 0;
-    width: 100%;
-    height: 100%;
-    max-height: 100vh;
+    width: 80vw;
+    transform: rotateY(180deg) rotateZ(-8deg) translateX(100px);
 }
 
+/* HEADER name n profession container */
 .text_container {
     position: absolute;
-    top: 34%;
-    left: 1%;
+    top: 37%;
+    left: 12%;
     z-index: 1;
-    color: #FAFAFC;
+    color: var(--primary_white_color);
+    white-space: nowrap;
 }
 
-
+/* name and description */
 .name {
-    z-index: 1;
-    font-size: 3rem;
-    /* word-wrap:break-word; */
+    font-size: 3.5rem;
 }
 
+/* subtitle */
 .span {
-    z-index: 1;
-    text-align: center;
-    font-weight: 700;
-}
-
-.arrow_to_bottom {
     position: absolute;
-    z-index: 1;
-    justify-content: center;
-
-    /* transform: translateX(-73%) translateY(2440%); */
-
+    bottom: 6%;
+    font-weight: 300;
 }
 
-/* .arrow-to-top {
-    position: fixed;
+/* call to action button */
+/* .learn_more_container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2.3px solid var(--primary_white_color);
+    padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+    margin-top: 2rem;
+    transition: border-color 0.5s ease;
+}
+
+.learn_more_container:hover {
+    border-color: aqua;
 } */
 
-@media screen and (min-width: 1024px) {
-    
+.learn_more {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    font-weight: 600;
+    font-size: 0.8rem;
+    /* font-style: italic; */
+
+    padding: 0.9rem 1.9rem 0.9rem 1.9rem;
+    margin-top: 2rem;
+
+    border: 1.9px outset var(--primary_white_color);
+    color: var(--primary_white_color);
+
+    background-color: transparent;
+    background-image:  linear-gradient(40deg,rgba(67, 67, 67, 1) 20%, rgb(18, 1, 1) 110%);
+    background-size: 200% 100%;
+    transition: background-position 1s ease;
+    cursor: pointer;
 }
+
+.learn_more:hover {
+    background-position: top;
+}
+
+/* MAIN about me and projects container */
+.main {
+    color: var(--secondary_white_color);
+}
+
+.aboutme_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.aboutme_title {
+    
+    font-weight: 300;
+    font-size: xx-large;
+    position: relative;
+    top: 10px;
+}
+
+.aboutme_text {
+    font-weight: 200;
+    position: relative;
+    bottom: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.projects_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.projects_title {
+    font-weight: 300;
+    font-size: xx-large;
+    position: relative;
+    top: 10px;
+
+}
+
+.project_first,
+.project_second,
+.project_third,
+.project_fourth {
+    font-weight: 200;
+    line-height: 2rem;
+    color: var(--secondary_white_color);
+    transition: color 0.6s ease;
+
+}
+
+.project_first:hover,
+.project_second:hover,
+.project_third:hover,
+.project_fourth:hover {
+    color: rgb(255, 0, 0);
+}
+
+
+
+@media screen and (min-width: 1024px) {}
 
 @media screen and (max-width: 768px) {
     .name {

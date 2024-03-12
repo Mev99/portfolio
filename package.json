@@ -1,0 +1,25 @@
+{
+  "name": "portfolio_ayesa_matias",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mev99/portfolio.git"
+  },
+  "keywords": [
+    "portfolio-web_dev-fullstack-javaScript"
+  ],
+  "author": "mev99",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mev99/portfolio/issues"
+  },
+  "homepage": "https://github.com/mev99/portfolio#readme",
+  "devDependencies": {
+    "sass": "^1.71.1"
+  }
+}
