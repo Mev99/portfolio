@@ -23,9 +23,9 @@ a {
 }
 
 /* header div */
-.name_div {
+.banner_div {
     background-color: transparent;
-    background-image: linear-gradient(200deg, rgb(18, 1, 1) 0%, rgba(67, 67, 67, 1) 85%);
+    background-image: linear-gradient(200deg, rgb(0, 0, 0) 0%, rgba(67, 67, 67, 1) 85%);
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
@@ -34,14 +34,14 @@ a {
 /* mushroom img at header */
 .mushroom_img {
     z-index: 0;
-    width: 80vw;
-    transform: rotateY(180deg) rotateZ(-8deg) translateX(100px);
+    width: 85vw;
+    transform: rotateY(0deg) rotateZ(0deg) translateX(0px);
 }
 
-/* HEADER name n profession container */
+/* header name container */
 .text_container {
     position: absolute;
-    top: 37%;
+    top: 30%;
     left: 12%;
     z-index: 1;
     color: var(--primary_white_color);
@@ -60,7 +60,7 @@ a {
     font-weight: 300;
 }
 
-/* LEARN MORE CALL TO ACTION */
+/* LEARN MORE */
 .learn_more {
     position: absolute;
     display: flex;
@@ -88,11 +88,12 @@ a {
     background-position: top;
 }
 
-/* MAIN about me and projects container */
+/* MAIN about me, projects and contact info container */
 .main {
     color: var(--secondary_white_color);
 }
 
+/* about me container */
 .aboutme_div {
     display: flex;
     flex-direction: column;
@@ -122,6 +123,7 @@ a {
     line-height: 1.7rem;
 }
 
+/* projects container */
 .projects_div {
     display: flex;
     flex-direction: column;
@@ -162,8 +164,7 @@ a {
     color: rgb(255, 255, 255);
 }
 
-
-/* FOOTER */
+/* contact information container */
 .contact_title_div {
     display: flex;
     flex-direction: column;
@@ -186,14 +187,46 @@ a {
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
 }
 
-.contact_icon {
+.contact_icon_github,
+.contact_icon_linkedin,
+.contact_icon_email,
+.contact_icon_spotify,
+.contact_icon_discord {
     display: inline-block;
     padding: 0rem 1.5rem;
     color: rgb(167, 38, 70);
 }
+
+/* FOOTER container*/
+.footer_div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.3rem;
+}
+
+.footer_p {
+    color: var(--secondary_white_color);
+    font-size: small ;
+}
+
+.footer_a {
+    color: var(--primary_white_color);
+    transition: color 0.5s ease;
+}
+
+.footer_a:hover {
+    color: rgb(223, 12, 65);
+}
+
+.clipboard{
+    margin-right: 0.3rem;
+    margin-left: 0.1rem;
+    color: rgb(223, 12, 65) ;
+}
+
 
 @media screen and (min-width: 1024px) {}
 

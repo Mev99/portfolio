@@ -21,5 +21,9 @@
   "homepage": "https://github.com/mev99/portfolio#readme",
   "devDependencies": {
     "sass": "^1.71.1"
-  }
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  },
+  "type": "module"
 }
