@@ -9,6 +9,7 @@
     --primary_white_color: #FDFBF6;
     --secondary_white_color: #d4d4d4;
     --primary_dark_color: #1a1a1a;
+    --crimson_color: rgb(167, 38, 70)
 }
 
 body,
@@ -161,7 +162,7 @@ a {
 .project_second:hover,
 .project_third:hover,
 .project_fourth:hover {
-    color: rgb(255, 255, 255);
+    color: var(--crimson_color);
 }
 
 /* contact information container */
@@ -197,7 +198,7 @@ a {
 .contact_icon_discord {
     display: inline-block;
     padding: 0rem 1.5rem;
-    color: rgb(167, 38, 70);
+    color: var(--crimson_color);
 }
 
 /* FOOTER container*/
@@ -218,13 +219,13 @@ a {
 }
 
 .footer_a:hover {
-    color: rgb(223, 12, 65);
+    color: var(--crimson_color);
 }
 
 .clipboard{
     margin-right: 0.3rem;
     margin-left: 0.1rem;
-    color: rgb(223, 12, 65) ;
+    color: rgb(153, 194, 77) ;
 }
 
 
