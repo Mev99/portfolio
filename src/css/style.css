@@ -9,7 +9,9 @@
     --primary_white_color: #FDFBF6;
     --secondary_white_color: #d4d4d4;
     --primary_dark_color: #1a1a1a;
-    --crimson_color: rgb(167, 38, 70)
+    --crimson_color: rgb(167, 38, 70);
+    ;
+    --crimson_color_two: rgb(214, 40, 84);
 }
 
 body,
@@ -17,6 +19,7 @@ html {
     margin: 0;
     padding: 0;
     background-color: var(--primary_dark_color);
+    /* overflow-x: hidden; */
 }
 
 a {
@@ -26,18 +29,59 @@ a {
 /* header div */
 .banner_div {
     background-color: transparent;
-    background-image: linear-gradient(200deg, rgb(0, 0, 0) 0%, rgba(67, 67, 67, 1) 85%);
+    background-image: linear-gradient(270deg, rgb(0, 0, 0) 0%, rgba(67, 67, 67, 1) 85%);
+
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
 }
 
 /* mushroom img at header */
+.mushroom_div {
+    position: relative;
+    width: auto;
+    height: auto;
+    /* overflow: hidden; */
+}
+
 .mushroom_img {
     z-index: 0;
     width: 85vw;
     transform: rotateY(0deg) rotateZ(0deg) translateX(0px);
 }
+
+.spore_canvas {
+    border: 2px solid black;
+    position: absolute;
+    width: 50vw;
+    height: 85%;
+    top: 26%;
+    left: 28%;
+    border-radius: 45%;
+}
+
+/* .mushroom_spores{
+    position: absolute;
+  width: 25px; 
+  height: 25px; 
+  background-color: var(--crimson_color); 
+  border-radius: 50%;
+  animation: spores 10s infinite;
+  transform: translateX(20rem) translateY(-20rem);
+}
+
+@keyframes spores {
+    0% {
+        opacity: 0; 
+      }
+      50% {
+        opacity: 1; 
+      }
+      100% {
+        opacity: 0; 
+        transform: translateY(0px); 
+      }
+} */
 
 /* header name container */
 .text_container {
@@ -152,17 +196,34 @@ a {
 .project_second,
 .project_third,
 .project_fourth {
+    position: relative;
     font-weight: 400;
     line-height: 2rem;
     color: var(--secondary_white_color);
-    transition: color 0.5s ease;
 }
 
-.project_first:hover,
-.project_second:hover,
-.project_third:hover,
-.project_fourth:hover {
-    color: var(--crimson_color);
+.project_first::after,
+.project_second::after,
+.project_third::after,
+.project_fourth::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    bottom: 0;
+    left: 0;
+    background-color: var(--crimson_color_two);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+    transform: scaleX(0);
+}
+
+.project_first:hover::after,
+.project_second:hover::after,
+.project_third:hover::after,
+.project_fourth:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 /* contact information container */
@@ -210,7 +271,7 @@ a {
 
 .footer_p {
     color: var(--secondary_white_color);
-    font-size: small ;
+    font-size: small;
 }
 
 .footer_a {
@@ -222,11 +283,18 @@ a {
     color: var(--crimson_color);
 }
 
-.clipboard{
+.clipboard {
     margin-right: 0.3rem;
     margin-left: 0.1rem;
-    color: rgb(153, 194, 77) ;
+    color: var(--crimson_color);
 }
+
+.swal-content2 {
+    text-align: center;
+    align-items: center;
+    transform: translateY(0.2rem);
+}
+
 
 
 @media screen and (min-width: 1024px) {}
