@@ -8,7 +8,7 @@ learn_more_button.addEventListener('click', () => {
 // * BANNER TWEENS
 const tl_banner = gsap.timeline()
 tl_banner
-    .from('.mushroom_img', { duration: 2.5, x: 0, opacity: 0, delay: 1, ease: "bounce.inOut" })
+    .from('.mushroom_img', { duration: 1.6, x: 0, opacity: 0, delay: 1, ease: "bounce.inOut" })
 
 // * CONTACT ME ICONS MOVEMENT
 const icons = document.querySelectorAll('.contact_icon_github, .contact_icon_linkedin, .contact_icon_email, .contact_icon_spotify, .contact_icon_discord')

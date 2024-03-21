@@ -8,9 +8,8 @@
 
     --primary_white_color: #FDFBF6;
     --secondary_white_color: #d4d4d4;
-    --primary_dark_color: #1a1a1a;
+    --primary_dark_color: rgb(26, 26, 26);
     --crimson_color: rgb(167, 38, 70);
-    ;
     --crimson_color_two: rgb(214, 40, 84);
 }
 
@@ -50,37 +49,16 @@ a {
     transform: rotateY(0deg) rotateZ(0deg) translateX(0px);
 }
 
-.spore_canvas {
+
+/* CANVAS P5.JS */
+/* #mushroom_spores {
+    position: relative;
+    
+} */
+
+/* canvas {
     border: 2px solid black;
-    position: absolute;
-    width: 50vw;
-    height: 85%;
-    top: 26%;
-    left: 28%;
-    border-radius: 45%;
-}
-
-/* .mushroom_spores{
-    position: absolute;
-  width: 25px; 
-  height: 25px; 
-  background-color: var(--crimson_color); 
-  border-radius: 50%;
-  animation: spores 10s infinite;
-  transform: translateX(20rem) translateY(-20rem);
-}
-
-@keyframes spores {
-    0% {
-        opacity: 0; 
-      }
-      50% {
-        opacity: 1; 
-      }
-      100% {
-        opacity: 0; 
-        transform: translateY(0px); 
-      }
+    border-radius: 50%;
 } */
 
 /* header name container */
@@ -166,6 +144,11 @@ a {
     position: relative;
     bottom: 1.2rem;
     line-height: 1.7rem;
+}
+
+/* CANVAS P5.JS  */
+#canvas_tech{
+    border: 2px, solid, black;
 }
 
 /* projects container */

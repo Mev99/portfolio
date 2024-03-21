@@ -27,9 +27,8 @@
 
             <div class="mushroom_div">
                 <img src="./src/public/amanita3_cut.png" alt="mushroom_img" class="mushroom_img">
-                <div class="mushroom_spores">
-                    <canvas class="spore_canvas"></canvas>
-                </div>
+
+                <div id="mushroom_spores"></div>
             </div>
 
             <div class="text_container">
@@ -41,15 +40,19 @@
             </div>
         </div>
 
-
     </header>
 
     <main class="main">
         <div class="aboutme_div">
             <h2 class="aboutme_title">About me</h2>
-            <p class="aboutme_text">I am a web Developer located in Argentina I work with CSS,<br> JavaScript, React,
-                Node, Express, MongoDB, and many more<br>I enjoy simplicity in design
+            <p class="aboutme_text">I am a web Developer located in Argentina, I began my developing journey two years
+                ago. In this time i've gained experience in a wide variaty of technologies. Now I am learning 2D and 3D
+                (WebGL) with P5js.<br>
+                I love making simple designs and user friendly applications.<br>
+                Let's build something together!
+                <!-- HTML,  CSS,  JavaScript, React.js,  next.js, Node.js, Express.js, MongoDB, and many more technologies. -->
             </p>
+            <div id="canvas_tech"></div>
         </div>
 
         <div class="projects_div">
@@ -111,7 +114,10 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
     <!-- Sweet alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- P5 JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.1/lib/p5.js"></script>
     <!-- SCRIPT -->
+    <script src="./src/js/sketch.js"></script>
     <script src="./src/js/script.js"></script>
 </body>
 
