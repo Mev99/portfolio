@@ -34,16 +34,16 @@ let rotAngle = 0
 //   [200, 0, 0],
 // ]
 function preload() {
-  html = loadImage('/src/public/html_icon.png')
-  css = loadImage('/src/public/css_icon.png')
-  sass = loadImage('/src/public/sass_icon.png')
-  js = loadImage('/src/public/js_icon.png')
-  ts = loadImage('/src/public/ts_icon.png')
-  react = loadImage('/src/public/react_icon.png')
-  nextjs = loadImage('/src/public/nextjs_icon.png')
-  node = loadImage('/src/public/node_icon.png')
-  mongodb = loadImage('/src/public/mongodb_icon.png')
-  git = loadImage('/src/public/git_icon.png')
+  html = loadImage('portfolio/src/public/html_icon.png')
+  css = loadImage('portfolio/src/public/css_icon.png')
+  sass = loadImage('portfolio/src/public/sass_icon.png')
+  js = loadImage('portfolio/src/public/js_icon.png')
+  ts = loadImage('portfolio/src/public/ts_icon.png')
+  react = loadImage('portfolio/src/public/react_icon.png')
+  nextjs = loadImage('portfolio/src/public/nextjs_icon.png')
+  node = loadImage('portfolio/src/public/node_icon.png')
+  mongodb = loadImage('portfolio/src/public/mongodb_icon.png')
+  git = loadImage('portfolio/src/public/git_icon.png')
   // postman = loadImage('/src/public/postman_icon.png')
   images = [html, css, sass, js, ts, react, nextjs, node, mongodb, git]
 }
