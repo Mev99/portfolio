@@ -50,15 +50,20 @@ a {
 }
 
 
-/* CANVAS P5.JS */
-/* #mushroom_spores {
-    position: relative;
+/* CANVAS P5.JS PARENT */
+#mushroom_spores {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border: 2px solid purple;
     
-} */
-
-canvas {
-    /* border: 2px solid var(--crimson_color); */
-    /* border-radius: 40%; */
+} 
+/* CANVAS P5.JS */
+#test{
+    border: 2px solid rgb(55, 130, 30);
+    /* position: absolute; */
 }
 
 /* header name container */
@@ -282,8 +287,4 @@ canvas {
 
 @media screen and (min-width: 1024px) {}
 
-@media screen and (max-width: 768px) {
-    .name {
-        font-size: 2px;
-    }
-}
+@media screen and (max-width: 768px) {}

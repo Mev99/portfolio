@@ -17,22 +17,22 @@ let angle = 0
 let camAngle = 0
 let rotAngle = 0
 // * Second option for showing techs
-let posX = 50
-let posY = 0
-let posZ = 0
-let test = 45
-let positions = [
-  [-200, -100, 0],
-  [-100, -100, 0],
-  [0, -100, 0],
-  [100, -100, 0],
-  [200, -100, 0],
-  [-200, 0, 0],
-  [-100, 0, 0],
-  [-0, 0, 0],
-  [100, 0, 0],
-  [200, 0, 0],
-]
+// let posX = 50
+// let posY = 0
+// let posZ = 0
+// let test = 45
+// let positions = [
+//   [-200, -100, 0],
+//   [-100, -100, 0],
+//   [0, -100, 0],
+//   [100, -100, 0],
+//   [200, -100, 0],
+//   [-200, 0, 0],
+//   [-100, 0, 0],
+//   [-0, 0, 0],
+//   [100, 0, 0],
+//   [200, 0, 0],
+// ]
 function preload() {
   html = loadImage('/src/public/html_icon.png')
   css = loadImage('/src/public/css_icon.png')
@@ -49,13 +49,12 @@ function preload() {
 }
 
 function setup() {
-  let canvas = createCanvas(650, 600, P2D);
+  let canvas = createCanvas(windowWidth /2, windowHeight /2 * 1.2, P2D);
   canvas.parent('mushroom_spores');
-  canvas.position(425, 190);
-  let fps = getTargetFrameRate();
-  text(fps, 330, 200, 50, 50)
+  canvas.id("test")
+  // canvas.position(425, 190);
   
-  let canvas_tech = createCanvas(600, 300, WEBGL)
+  let canvas_tech = createCanvas(750, 300, WEBGL)
   canvas_tech.parent('canvas_tech')
 
   for (let i = 0; i < 10; i++) {
@@ -63,22 +62,25 @@ function setup() {
     let x = cos(angle) * RADIUS;
     let z = sin(angle) * RADIUS;
     boxes.push(createVector(x, 0, z));
-  }
+}
 }
 
 
 function draw() {
+
+
   let index = 0
   background(26, 26, 26);
   noStroke()
+
   // * Cam positions
   let camX = sin(camAngle) * 170;
   let camY = 0;
   let camZ = cos(camAngle) * 170; 
   camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
-
+  
   for (let i = 0; i < 10; i++) {
-    // *Distance between boxes and positions
+    // * Distance between boxes and positions
     let angle = TWO_PI / 10 * i;
     let x = cos(angle) * 120;
     let z = sin(angle) * 120;
@@ -93,7 +95,7 @@ function draw() {
     pop();
     index++
   }
-  camAngle -= 0.008;
+  camAngle -= 0.01;
   rotAngle += 0.01
 
   // * second option for showing techs
@@ -112,4 +114,8 @@ function draw() {
   //   index++
   // }
   // angle += 0.01
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
