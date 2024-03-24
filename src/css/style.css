@@ -136,7 +136,7 @@ a {
 }
 
 /* CANVAS P5.JS  */
-#canvas_tech{
+#canvas_tech {
     border: 2px, solid, black;
 }
 
@@ -268,7 +268,53 @@ a {
 }
 
 
+@media screen and (max-width: 1362px) {
+    .text_container {
+        left: 10%;
+        top: 20%;
+    }
 
-@media screen and (min-width: 1024px) {}
+    .name {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .text_container{
+        left: 7%;
+    }
+    .name {
+        font-size: 2rem;
+    }
+    
+    .mushroom_div {
+        transform: translateX(0rem);
+    }
+    .span {
+        font-size: 0.8rem;
+    }
+    
+    .learn_more {
+        font-size: 0.6rem;
+        padding: 0.8rem 1.8rem 0.8rem 1.8rem
+    }
+
+    .main {
+        font-size: 90%;
+    }
+    
+    .aboutme_title {
+        font-size: 2.2rem;
+    }
+    
+    .projects_title {
+        font-size: 2.2rem;
+    }
+    
+    .contact_title {
+        font-size: 2.2rem;
+    }
+}
 
 @media screen and (max-width: 768px) {}
+
