@@ -21,6 +21,7 @@ let posY = 0
 let posZ = 0
 let test = 45
 let positions = []
+let flag = false
 function preload() {
   html = loadImage('src/public/html_icon.png')
   css = loadImage('src/public/css_icon_2.png')
@@ -54,7 +55,6 @@ function draw() {
 
 function canvas1() {
   // * Second option for showing techs
-
   if (windowWidth <= 500) {
     positions = [
       [-100, -150, 0],
@@ -68,7 +68,10 @@ function canvas1() {
       [100, 50, 0],
       [0, 150, 0]
     ]
-    // windowResized()
+    if (flag === false) {
+      windowResized()
+      flag = true
+    }
   } else if (windowWidth > 500) {
     positions = [
       [-200, -50, 0],
@@ -132,7 +135,6 @@ function canvas1() {
 function windowResized() {
   if (windowWidth <= 500) {
     resizeCanvas(windowWidth, 420)
-    console.log('first')
     return
   }
   resizeCanvas(windowWidth, 200)
