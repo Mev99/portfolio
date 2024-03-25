@@ -9,7 +9,6 @@ let react
 let mongodb
 let node
 let git
-// let postman
 let images = []
 // * Draw variables
 let boxes = []
@@ -21,18 +20,7 @@ let posX = 50
 let posY = 0
 let posZ = 0
 let test = 45
-let positions = [
-  [-200, -100, 0],
-  [-100, -100, 0],
-  [0, -100, 0],
-  [100, -100, 0],
-  [200, -100, 0],
-  [-200, 0, 0],
-  [-100, 0, 0],
-  [-0, 0, 0],
-  [100, 0, 0],
-  [200, 0, 0],
-]
+let positions = []
 function preload() {
   html = loadImage('src/public/html_icon.png')
   css = loadImage('src/public/css_icon_2.png')
@@ -44,14 +32,15 @@ function preload() {
   node = loadImage('src/public/node_icon.png')
   mongodb = loadImage('src/public/mongodb_icon.png')
   git = loadImage('src/public/git_icon.png')
-  // postman = loadImage('/src/public/postman_icon.png')
+
   images = [html, css, sass, js, ts, react, nextjs, node, mongodb, git]
 }
 
 function setup() {
-  let canvas_tech = createCanvas(750, 300, WEBGL)
+  let canvas_tech = createCanvas(windowWidth, 200, WEBGL)
   canvas_tech.parent('canvas_tech')
 
+  // * Rotating cam in the center
   // for (let i = 0; i < 10; i++) {
   //   let angle = TWO_PI / 10 * i;
   //   let x = cos(angle) * RADIUS;
@@ -60,46 +49,40 @@ function setup() {
   // }
 }
 function draw() {
-
-canvas2()
-
-
+  canvas1()
 }
 
 function canvas1() {
-  sphere(100)
-}
-function canvas2() {
-  // let index = 0
-  // background(26, 26, 26);
-  // noStroke()
-  // // * Light
-  // // * Cam positions
-  // let camX = sin(camAngle) * 170;
-  // let camY = 0;
-  // let camZ = cos(camAngle) * 170;
-  // camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
-  
-  // for (let i = 0; i < 10; i++) {
-  //   // * Distance between boxes and positions
-  //   let angle = TWO_PI / 10 * i;
-  //   let x = cos(angle) * 120;
-  //   let z = sin(angle) * 120;
-  
-  //   push();
-  //   translate(x, 0, z);
-  //   rotateX(rotAngle);
-  //   rotateY(rotAngle);
-  //   rotateZ(rotAngle);
-  //   texture(images[index]);
-  //   box(23);
-  //   pop();
-  //   index++
-  // }
-  // camAngle -= 0.01;
-  // rotAngle += 0.01
-  
-  // * second option for showing techs
+  // * Second option for showing techs
+
+  if (windowWidth <= 500) {
+    positions = [
+      [-100, -150, 0],
+      [0, -150, 0],
+      [100, -150, 0],
+      [-100, -50, 0],
+      [0, -50, 0],
+      [100, -50, 0],
+      [-100, 50, 0],
+      [0, 50, 0],
+      [100, 50, 0],
+      [0, 150, 0]
+    ]
+    // windowResized()
+  } else if (windowWidth > 500) {
+    positions = [
+      [-200, -50, 0],
+      [-100, -50, 0],
+      [0, -50, 0],
+      [100, -50, 0],
+      [200, -50, 0],
+      [-200, 50, 0],
+      [-100, 50, 0],
+      [-0, 50, 0],
+      [100, 50, 0],
+      [200, 50, 0],
+    ]
+  }
   let index = 0
   background(26, 26, 26);
   noStroke()
@@ -115,4 +98,42 @@ function canvas2() {
     index++
   }
   angle += 0.01
+
+  // let index = 0
+  // background(26, 26, 26);
+  // noStroke()
+  // // * Light
+  // // * Cam positions
+  // let camX = sin(camAngle) * 170;
+  // let camY = 0;
+  // let camZ = cos(camAngle) * 170;
+  // camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
+
+  // for (let i = 0; i < 10; i++) {
+  //   // * Distance between boxes and positions
+  //   let angle = TWO_PI / 10 * i;
+  //   let x = cos(angle) * 120;
+  //   let z = sin(angle) * 120;
+
+  //   push();
+  //   translate(x, 0, z);
+  //   rotateX(rotAngle);
+  //   rotateY(rotAngle);
+  //   rotateZ(rotAngle);
+  //   texture(images[index]);
+  //   box(23);
+  //   pop();
+  //   index++
+  // }
+  // camAngle -= 0.01;
+  // rotAngle += 0.01
+}
+
+function windowResized() {
+  if (windowWidth <= 500) {
+    resizeCanvas(windowWidth, 420)
+    console.log('first')
+    return
+  }
+  resizeCanvas(windowWidth, 200)
 }

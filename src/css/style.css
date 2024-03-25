@@ -18,7 +18,6 @@ html {
     margin: 0;
     padding: 0;
     background-color: var(--primary_dark_color);
-    /* overflow-x: hidden; */
 }
 
 a {
@@ -40,7 +39,8 @@ a {
     position: relative;
     width: auto;
     height: auto;
-    /* overflow: hidden; */
+    
+    
 }
 
 .mushroom_img {
@@ -60,13 +60,17 @@ a {
     white-space: nowrap;
 }
 
+.text_container_responsive {
+    display: none;
+}
+
 /* matias ayesa NAME */
-.name {
+.banner_name {
     font-size: 3.5rem;
 }
 
 /* subtitle */
-.span {
+.banner_subtitle {
     position: absolute;
     bottom: 6%;
     font-weight: 300;
@@ -137,7 +141,7 @@ a {
 
 /* CANVAS P5.JS  */
 #canvas_tech {
-    border: 2px, solid, black;
+    /* border: 2px solid rgb(239, 0, 0); */
 }
 
 /* projects container */
@@ -274,26 +278,24 @@ a {
         top: 20%;
     }
 
-    .name {
+    .banner_name {
         font-size: 2.5rem;
     }
 }
 
 @media screen and (max-width: 960px) {
-    .text_container{
+    .text_container {
         left: 7%;
     }
-    .name {
+
+    .banner_name {
         font-size: 2rem;
     }
-    
-    .mushroom_div {
-        transform: translateX(0rem);
-    }
-    .span {
+
+    .banner_subtitle {
         font-size: 0.8rem;
     }
-    
+
     .learn_more {
         font-size: 0.6rem;
         padding: 0.8rem 1.8rem 0.8rem 1.8rem
@@ -302,19 +304,63 @@ a {
     .main {
         font-size: 90%;
     }
-    
+
     .aboutme_title {
         font-size: 2.2rem;
     }
-    
+
     .projects_title {
         font-size: 2.2rem;
     }
-    
+
     .contact_title {
         font-size: 2.2rem;
     }
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .mushroom_div {
+        transform: translateX(-20%);
+    }
 
+    .text_container {
+        display: none;
+    }
+
+    .text_container_responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
+    }
+
+    .banner_name_responsive {
+        position: relative;
+        margin-top: 3rem;
+        top: 10px;
+        font-weight: 550;
+        font-size: 2.5rem;
+    }
+
+    .banner_subtitle_responsive {
+        font-weight: 400;
+        position: relative;
+        bottom: 1.2rem;
+        line-height: 1.7rem;
+    }
+    
+    .aboutme_title{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-wdith: 450px) {
+    
+}
