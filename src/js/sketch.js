@@ -55,7 +55,7 @@ function draw() {
 
 function canvas1() {
   // * Second option for showing techs
-  if (windowWidth <= 500) {
+  if (windowWidth <= 800) {
     positions = [
       [-100, -150, 0],
       [0, -150, 0],
@@ -72,7 +72,7 @@ function canvas1() {
       windowResized()
       flag = true
     }
-  } else if (windowWidth > 500) {
+  } else if (windowWidth > 800) {
     positions = [
       [-200, -50, 0],
       [-100, -50, 0],
@@ -133,7 +133,7 @@ function canvas1() {
 }
 
 function windowResized() {
-  if (windowWidth <= 500) {
+  if (windowWidth <= 800) {
     resizeCanvas(windowWidth, 420)
     return
   }

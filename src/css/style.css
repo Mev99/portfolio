@@ -13,11 +13,16 @@
     --crimson_color_two: rgb(214, 40, 84);
 }
 
-body,
 html {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+body{
+    margin: 0;
+    padding: 0;
     background-color: var(--primary_dark_color);
+    
 }
 
 a {
@@ -39,8 +44,6 @@ a {
     position: relative;
     width: auto;
     height: auto;
-    
-    
 }
 
 .mushroom_img {
@@ -107,6 +110,7 @@ a {
 /* MAIN about me, projects and contact info container */
 .main {
     color: var(--secondary_white_color);
+    margin: 0 15% 0 15%;
 }
 
 /* about me container */
@@ -117,9 +121,6 @@ a {
     align-items: center;
     align-content: center;
 
-    width: 50vw;
-    margin-left: auto;
-    margin-right: auto;
 
     text-align: center;
 }
@@ -139,11 +140,6 @@ a {
     line-height: 1.7rem;
 }
 
-/* CANVAS P5.JS  */
-#canvas_tech {
-    /* border: 2px solid rgb(239, 0, 0); */
-}
-
 /* projects container */
 .projects_div {
     display: flex;
@@ -152,9 +148,6 @@ a {
     align-items: center;
     align-content: center;
 
-    width: 50vw;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 2.5rem;
 
     text-align: center;
@@ -273,6 +266,7 @@ a {
 
 
 @media screen and (max-width: 1362px) {
+
     .text_container {
         left: 10%;
         top: 20%;
@@ -284,10 +278,6 @@ a {
 }
 
 @media screen and (max-width: 960px) {
-    .text_container {
-        left: 7%;
-    }
-
     .banner_name {
         font-size: 2rem;
     }
@@ -299,6 +289,10 @@ a {
     .learn_more {
         font-size: 0.6rem;
         padding: 0.8rem 1.8rem 0.8rem 1.8rem
+    }
+
+    .text_container {
+        left: 7%;
     }
 
     .main {
@@ -319,7 +313,22 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+    #body{
+        background-image: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(26, 26, 26) 30%);
+    }
+
+
+    .banner_div{
+        background-image: none;
+    }
+    .main {
+        margin: 0 3% 0 3%;
+        background-color: transparent;
+
+    }
+
     .mushroom_div {
+        margin-top: 4%;
         transform: translateX(-20%);
     }
 
@@ -334,10 +343,6 @@ a {
         align-items: center;
         align-content: center;
 
-        width: 70vw;
-        margin-left: auto;
-        margin-right: auto;
-
         text-align: center;
     }
 
@@ -346,7 +351,7 @@ a {
         margin-top: 3rem;
         top: 10px;
         font-weight: 550;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .banner_subtitle_responsive {
@@ -355,12 +360,31 @@ a {
         bottom: 1.2rem;
         line-height: 1.7rem;
     }
-    
-    .aboutme_title{
+
+    .aboutme_title {
         margin-top: 2rem;
     }
 }
 
-@media screen and (max-wdith: 450px) {
-    
+@media screen and (max-width: 507px) {
+    .footer_a,
+    .clipboard {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 381px) {
+    .icon_div {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .contact_icon_discord {
+        margin-left: 3rem
+    }
+
+    .contact_icon_spotify {
+        margin-right: 3.3rem;
+    }
 }
